@@ -1,0 +1,164 @@
+/* _content/OnlineShop.Components/Components/Button/WPButton.razor.rz.scp.css */
+.disabled[b-koiv7fpod2] {
+    opacity: 0.6; /* Adjust the opacity to make it visually disabled */
+    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+    /* Add any other styles to visually indicate the button is disabled */
+}
+/* _content/OnlineShop.Components/Components/Cards/ProductCard.razor.rz.scp.css */
+a[b-efb9zbzwcq] {
+    text-decoration: none;
+}
+
+a:hover .card[b-efb9zbzwcq] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card[b-efb9zbzwcq] {
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+a:hover img[b-efb9zbzwcq] {
+    transform: scale(1.07);
+    transition: 0.5s ease-in-out;
+}
+
+img[b-efb9zbzwcq] {
+    transition: 0.5s ease-in-out;
+}
+/* _content/OnlineShop.Components/Components/Payments/PaymentOption.razor.rz.scp.css */
+
+.custom-radio[b-0pvprjbaqk] {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.custom-radio input[b-0pvprjbaqk] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark[b-0pvprjbaqk] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.custom-radio input:checked ~ .checkmark[b-0pvprjbaqk] {
+    background-color: #2196f3;
+}
+
+.checkmark[b-0pvprjbaqk]:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked ~ .checkmark[b-0pvprjbaqk]:after {
+    display: block;
+}
+
+.custom-radio .checkmark[b-0pvprjbaqk]:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/* _content/OnlineShop.Components/Components/Spinner/SpinnerLoader.razor.rz.scp.css */
+.lds-roller[b-uek22tqe6d] {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-roller div[b-uek22tqe6d] {
+    animation: lds-roller-b-uek22tqe6d 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+.lds-roller div[b-uek22tqe6d]:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #030303;
+    margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1)[b-uek22tqe6d] {
+    animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1)[b-uek22tqe6d]:after {
+    top: 63px;
+    left: 63px;
+}
+.lds-roller div:nth-child(2)[b-uek22tqe6d] {
+    animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2)[b-uek22tqe6d]:after {
+    top: 68px;
+    left: 56px;
+}
+.lds-roller div:nth-child(3)[b-uek22tqe6d] {
+    animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3)[b-uek22tqe6d]:after {
+    top: 71px;
+    left: 48px;
+}
+.lds-roller div:nth-child(4)[b-uek22tqe6d] {
+    animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4)[b-uek22tqe6d]:after {
+    top: 72px;
+    left: 40px;
+}
+.lds-roller div:nth-child(5)[b-uek22tqe6d] {
+    animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5)[b-uek22tqe6d]:after {
+    top: 71px;
+    left: 32px;
+}
+.lds-roller div:nth-child(6)[b-uek22tqe6d] {
+    animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6)[b-uek22tqe6d]:after {
+    top: 68px;
+    left: 24px;
+}
+.lds-roller div:nth-child(7)[b-uek22tqe6d] {
+    animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7)[b-uek22tqe6d]:after {
+    top: 63px;
+    left: 17px;
+}
+.lds-roller div:nth-child(8)[b-uek22tqe6d] {
+    animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8)[b-uek22tqe6d]:after {
+    top: 56px;
+    left: 12px;
+}
+@keyframes lds-roller-b-uek22tqe6d {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

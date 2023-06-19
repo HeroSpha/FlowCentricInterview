@@ -1,0 +1,77 @@
+﻿@page "/shoppingCart"
+@using OnlineShop.Components.Components.Button.Enums
+@inherits CartCalculator
+@if (shoppingCartItems == null && string.IsNullOrEmpty(ErrorMessage))
+{
+    <SpinnerLoader></SpinnerLoader>
+} else if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <ErrorAlert Message="ErrorMessage"></ErrorAlert>
+}
+else
+{
+    if (shoppingCartItems != null)
+    {
+        <div class="d-flex justify-content-between ">
+            <Headers Title="Shopping cart details"></Headers> 
+            <Headers Title="@TotalQty.ToString("0 Items")"></Headers>
+        </div>
+    }
+    <div class="row">
+            <div class="col-md-8">
+                <ul class="list-group" id="cartItems">
+                                           <!-- Cart items will be dynamically added here -->
+               @foreach (var item in shoppingCartItems)
+               {
+                   <li class="list-group-item d-flex justify-content-between align-items-center">
+                       <div class="row">
+                           <div class="col-md-3">
+                               <img src="assets/images/no-image.jpg" alt="@item.ProductName"
+                                    class="img-thumbnail">
+                           </div>
+                           <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
+                               <h5 class="text-secondary">@item.ProductName</h5>
+                               <p>@item.CategoryName</p>
+                           </div>
+                           <div class="col-md-3 d-flex align-items-center justify-content-center">
+                               <div class="input-group mb-3 aligns-items-center">
+                                   <button class="btn" @onclick="() => RemoveFromCart_Click(item)">
+                                       <i class="bi-dash text-primary button-icon"></i>
+                                   </button>
+                                   <div class="border rounded p-2 px-2 text-secondary">
+                                       <span class="mx-2">@item.Qty</span>
+                                   </div>
+                                   <button class="btn" @onclick="() => AddToCart_Click(item, 1)">
+                                       <i class="bi-plus text-primary button-icon" ></i>
+                                   </button>
+                               </div>
+                               </div>
+                           <div class="col-md-3 d-flex align-items-center justify-content-center">
+                               <h6>@CalculateItemTotal(item).ToString("C")</h6>
+                               <button class="btn" @onclick="() => RemoveCart_Click(item.ProductId)">
+                                   <i class="bi-x-lg text-primary"></i>
+                               </button>
+                           </div>
+                       </div>
+                   </li>
+               }
+
+           </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        @* <h5 class="card-title"> [@GetTotalItems() Items]</h5> *@
+                        <SubHeaders Title="Order summary"></SubHeaders>
+                        <ul class="list-group mb-3" id="orderSummary">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Total
+                                <span class="badge bg-primary">@TotalCost.ToString("C")</span>
+                            </li>
+                        </ul>
+                        <WPButton Icon="credit-card" Text="Proceed to checkout" OnClick="Checkout" IsDisabled="!CanCheckout" ButtonStyle="ButtonStyle.primary"></WPButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+}

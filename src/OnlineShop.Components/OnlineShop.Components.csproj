@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorComponentUtilities" Version="1.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Components\Button\WPButton.cs">
+      <DependentUpon>WPButton.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Components\Cards\ProductCard.cs">
+      <DependentUpon>ProductCard.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Components\Payments\PaymentOption.cs">
+      <DependentUpon>PaymentOption.razor</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+</Project>

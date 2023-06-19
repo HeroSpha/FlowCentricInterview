@@ -1,0 +1,59 @@
+﻿@page "/Checkout"
+@using global::Shared
+@inherits CartCalculator
+<Headers Title="Checkout"></Headers> 
+@if (shoppingCartItems == null && string.IsNullOrEmpty(ErrorMessage))
+{
+    <SpinnerLoader />
+} else if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <ErrorAlert Message="ErrorMessage"></ErrorAlert>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            @foreach (var item in Enum.GetValues(typeof(PaymentMethodEnum)).Cast<PaymentMethodEnum>())
+            {
+                <PaymentOption GroupName="PaymentOption" Label="@item.ToString()" Value="@item"  IsSelected="@IsSelected(item)" OnClick="() => SelectPaymentMethod(item)"/>
+            }
+            <hr class="mb-3"/>
+            <PaymentMethod SelectedPaymentMethod="SelectedPaymentMethod" IsDisabled="!CanCheckout" OnClick="Checkout"></PaymentMethod>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in shoppingCartItems)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.CategoryName</td>
+                        <td>@item.Qty</td>
+                        <td>@item.UnitPrice.ToString("C")</td>
+                        <td>@CalculateItemTotal(item).ToString("C")</td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="4"><b>Total</b></td>
+                    <td><b>@TotalCost.ToString("C")</b></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><b>Applied Discount</b></td>
+                    <td><b>@AppliedDiscount?.Percent.ToString() %</b></td>
+                </tr>
+
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+}

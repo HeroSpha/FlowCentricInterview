@@ -1,0 +1,5 @@
+.disabled[b-koiv7fpod2] {
+    opacity: 0.6; /* Adjust the opacity to make it visually disabled */
+    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+    /* Add any other styles to visually indicate the button is disabled */
+}

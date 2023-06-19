@@ -1,0 +1,72 @@
+[
+  {
+    "productId": 1,
+    "productName": "Table",
+    "categoryName": "Furniture",
+    "unitPrice": 2000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 2,
+    "productName": "Chair",
+    "categoryName": "Furniture",
+    "unitPrice": 500.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 3,
+    "productName": "58\" Plasma Screen",
+    "categoryName": "Audio Visual",
+    "unitPrice": 15000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 4,
+    "productName": "Hi-Fi",
+    "categoryName": "Audio Visual",
+    "unitPrice": 1200.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 5,
+    "productName": "65\" LED Screen",
+    "categoryName": "Audio Visual",
+    "unitPrice": 18000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 6,
+    "productName": "Camping Table",
+    "categoryName": "Outdoor",
+    "unitPrice": 2000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 7,
+    "productName": "Camping Chair",
+    "categoryName": "Outdoor",
+    "unitPrice": 2000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 8,
+    "productName": "Gas Braai",
+    "categoryName": "Outdoor",
+    "unitPrice": 2000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 9,
+    "productName": "Tent",
+    "categoryName": "Outdoor",
+    "unitPrice": 5000.0000,
+    "orderDetails": []
+  },
+  {
+    "productId": 10,
+    "productName": "TV Stand",
+    "categoryName": "Furniture",
+    "unitPrice": 700.0000,
+    "orderDetails": []
+  }
+]

@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="7.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.7" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShop.Components\OnlineShop.Components.csproj" />
+    <ProjectReference Include="..\OnlineShop.Services\OnlineShop.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\Index.cs">
+      <DependentUpon>Index.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Shared\NavMenu.cs">
+      <DependentUpon>NavMenu.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Components\DisplayProducts.cs">
+      <DependentUpon>DisplayProducts.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ProductDetails\DisplayProductDetails.cs">
+      <DependentUpon>DisplayProductDetails.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ShopppingCart\ShoppingCartDisplay.cs">
+      <DependentUpon>ShoppingCartDisplay.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Shared\CartMenu.cs">
+      <DependentUpon>CartMenu.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Orders\Orders.cs">
+      <DependentUpon>Orders.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Checkout\CheckoutDisplay.cs">
+      <DependentUpon>CheckoutDisplay.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Authentication\Login.cs">
+      <DependentUpon>Login.razor</DependentUpon>
+    </Compile>
+    <Compile Update="Shared\User.cs">
+      <DependentUpon>User.razor</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

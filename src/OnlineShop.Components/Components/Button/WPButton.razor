@@ -1,0 +1,9 @@
+﻿@namespace OnlineShop.Components
+@inherits OnlineShop.Components.Components.WPComponentBase
+<button class="btn @_buttonClasses"  disabled="@IsDisabled" @attributes="UserAttributes" @onclick="OnClick">
+    @if (!string.IsNullOrWhiteSpace(Icon))
+    {
+        <span class="bi-@Icon me-2"></span>
+    }
+    @Text
+</button>

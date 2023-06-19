@@ -1,0 +1,23 @@
+﻿@namespace OnlineShop.Components
+@inherits OnlineShop.Components.Components.WPComponentBase
+<div class="col-md-3 col-lg-3 mb-2">
+    <a href="/ProductDetails/@ProductId" @onclick="OnClick" class="link-no-style">
+        <div class="card">
+            <img class="img-thumbnail" src="assets/images/no-image.jpg" alt="@ProductName"/>
+            <div class="card-body">
+                <div class="card-title mb-2">
+                    <div class="d-flex justify-content-between">
+                        <h5>@ProductName</h5>
+                        <p class="text-secondary">@CategoryName</p>
+                    </div>
+                </div>
+               
+                <b>
+                    <p class="card-text">
+                        @UnitPrice.ToString("C")
+                    </p>
+                </b>
+            </div>
+        </div>
+    </a>
+</div>

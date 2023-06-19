@@ -1,0 +1,26 @@
+﻿@namespace OnlineShop.Pages
+@page "/login"
+<EditForm Model="user" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+        <ValidationSummary />
+    <div class="card shadow-sm align-content-center">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="userInputEmail" class="form-label">Username</label>
+                <InputText type="text" class="form-control" @oninput="HandleTextChanged" id="userInputEmail" @bind-Value="user.Username" aria-describedby="usernameHelp"/>
+                 <ValidationMessage For="@(()=>user.Username)" />
+            </div>
+            <div class="mb-3">
+                <label for="userInputPassword" class="form-label">Password</label>
+                <InputText type="password" @oninput="HandleTextChanged" @bind-Value="user.Password"  class="form-control" id="userInputPassword"/>
+                <ValidationMessage For="@(()=>user.Password)" />
+            </div>
+            @if (Invalid)
+            {
+                <ErrorAlert Message="Invalid username or password" />
+            }
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</EditForm>

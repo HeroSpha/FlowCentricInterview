@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OnlineShop.Components.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OnlineShop.Components.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.OnlineShop.Components.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.OnlineShop.Components.props",
+      "PackagePath": "build\\OnlineShop.Components.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.OnlineShop.Components.props",
+      "PackagePath": "buildMultiTargeting\\OnlineShop.Components.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.OnlineShop.Components.props",
+      "PackagePath": "buildTransitive\\OnlineShop.Components.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

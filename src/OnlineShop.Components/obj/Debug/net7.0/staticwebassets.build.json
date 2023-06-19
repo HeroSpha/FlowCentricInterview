@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "Fxd4aYRNAB6CxzhDKzCcySsXhBaVb0dzRm47NxjvkFE=",
+  "Source": "OnlineShop.Components",
+  "BasePath": "_content/OnlineShop.Components",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "OnlineShop.Components\\wwwroot",
+      "Source": "OnlineShop.Components",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\wwwroot\\",
+      "BasePath": "_content/OnlineShop.Components",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OnlineShop.Components.styles.css",
+      "SourceId": "OnlineShop.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/OnlineShop.Components",
+      "RelativePath": "OnlineShop.Components.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OnlineShop.Components.styles.css"
+    },
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OnlineShop.Components.bundle.scp.css",
+      "SourceId": "OnlineShop.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/OnlineShop.Components",
+      "RelativePath": "OnlineShop.Components.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OnlineShop.Components.bundle.scp.css"
+    }
+  ]
+}

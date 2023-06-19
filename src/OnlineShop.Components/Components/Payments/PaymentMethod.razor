@@ -1,0 +1,96 @@
+﻿@namespace OnlineShop.Components
+@switch (SelectedPaymentMethod)
+{
+    case PaymentMethodEnum.Paypal:
+        <PaypalComponent>
+            <ChildContent>
+                <div class="d-grid gap-2 mt-3">
+                    <WPButton OnClick="OnClick" Text="Checkout using Paypal" IsDisabled="IsDisabled"></WPButton>
+                    </div>
+            </ChildContent>
+        </PaypalComponent>
+        break;
+    case PaymentMethodEnum.Eft:
+        <EftComponent>
+            <ChildContent>
+                <div class="container mt-3">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col mb-3">
+                            <div class="card p-3 text-white">
+                                <img src="assets/images/African_Bank_logo.svg.png" class="card-img" alt="Image 1"/>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card p-3 text-white">
+                                <img src="assets/images/Discovery_Limited_logo.svg.png" class="card-img" alt="Image 1"/>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card p-3 text-white">
+                                <img src="assets/images/First_National_Bank_Logo.svg.png" class="card-img" alt="Image 1"/>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                <div class="d-grid gap-2 mt-3">
+                    <WPButton OnClick="OnClick" Text="Checkout using select bank" IsDisabled="IsDisabled"></WPButton>
+                </div>
+            </ChildContent>
+        </EftComponent>
+        break;
+    case PaymentMethodEnum.Debit:
+        <DebitComponent>
+            <ChildContent>
+                <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="cardNumber">Card Number</label>
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="expiryDate">Expiration Date</label>
+                                                    <input type="text" class="form-control" id="expiryDate"
+                                                        placeholder="MM / YY">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cvv">CVV</label>
+                                                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cardHolder">Cardholder Name</label>
+                                                <input type="text" class="form-control" id="cardHolder"
+                                                    placeholder="Enter cardholder name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="billingAddress">Billing Address</label>
+                                                <input type="text" class="form-control" id="billingAddress"
+                                                    placeholder="Enter billing address">
+                                            </div>
+                                           <div class="d-grid gap-2 mt-3">
+                                               <WPButton OnClick="OnClick" Text="Checkout" IsDisabled="IsDisabled"></WPButton>
+                                           </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </ChildContent>
+        </DebitComponent>
+        break;
+}
+
+@code {
+    [Parameter] public PaymentMethodEnum SelectedPaymentMethod { get; set; }
+    
+    [Parameter] public EventCallback OnClick { get; set; }
+    [Parameter]public bool IsDisabled { get; set; }
+}

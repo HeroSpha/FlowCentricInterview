@@ -1,0 +1,15 @@
+D:\Webparam\OnlineShop\src\OnlineShop.Services\bin\Debug\net7.0\OnlineShop.Services.deps.json
+D:\Webparam\OnlineShop\src\OnlineShop.Services\bin\Debug\net7.0\OnlineShop.Services.dll
+D:\Webparam\OnlineShop\src\OnlineShop.Services\bin\Debug\net7.0\OnlineShop.Services.pdb
+D:\Webparam\OnlineShop\src\OnlineShop.Services\bin\Debug\net7.0\Shared.dll
+D:\Webparam\OnlineShop\src\OnlineShop.Services\bin\Debug\net7.0\Shared.pdb
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.csproj.AssemblyReference.cache
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.AssemblyInfoInputs.cache
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.AssemblyInfo.cs
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.csproj.CoreCompileInputs.cache
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.csproj.CopyComplete
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.dll
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\refint\OnlineShop.Services.dll
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\OnlineShop.Services.pdb
+D:\Webparam\OnlineShop\src\OnlineShop.Services\obj\Debug\net7.0\ref\OnlineShop.Services.dll

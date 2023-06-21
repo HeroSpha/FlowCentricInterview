@@ -1,7 +1,7 @@
 ﻿@page "/shoppingCart"
 @using OnlineShop.Components.Components.Button.Enums
 @inherits CartCalculator
-@if (shoppingCartItems == null && string.IsNullOrEmpty(ErrorMessage))
+@if (!shouldRender)
 {
     <SpinnerLoader></SpinnerLoader>
 } else if (!string.IsNullOrEmpty(ErrorMessage))
@@ -10,53 +10,56 @@
 }
 else
 {
-    if (shoppingCartItems != null)
+    if (shoppingCartItems.Any())
     {
-        <div class="d-flex justify-content-between ">
+        <div class="d-flex justify-content-between">
             <Headers Title="Shopping cart details"></Headers> 
             <Headers Title="@TotalQty.ToString("0 Items")"></Headers>
         </div>
-    }
-    <div class="row">
+        <div class="row">
             <div class="col-md-8">
-                <ul class="list-group" id="cartItems">
-                                           <!-- Cart items will be dynamically added here -->
-               @foreach (var item in shoppingCartItems)
-               {
-                   <li class="list-group-item d-flex justify-content-between align-items-center">
-                       <div class="row">
-                           <div class="col-md-3">
-                               <img src="assets/images/no-image.jpg" alt="@item.ProductName"
-                                    class="img-thumbnail">
-                           </div>
-                           <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                               <h5 class="text-secondary">@item.ProductName</h5>
-                               <p>@item.CategoryName</p>
-                           </div>
-                           <div class="col-md-3 d-flex align-items-center justify-content-center">
-                               <div class="input-group mb-3 aligns-items-center">
-                                   <button class="btn" @onclick="() => RemoveFromCart_Click(item)">
-                                       <i class="bi-dash text-primary button-icon"></i>
-                                   </button>
-                                   <div class="border rounded p-2 px-2 text-secondary">
-                                       <span class="mx-2">@item.Qty</span>
-                                   </div>
-                                   <button class="btn" @onclick="() => AddToCart_Click(item, 1)">
-                                       <i class="bi-plus text-primary button-icon" ></i>
-                                   </button>
-                               </div>
-                               </div>
-                           <div class="col-md-3 d-flex align-items-center justify-content-center">
-                               <h6>@CalculateItemTotal(item).ToString("C")</h6>
-                               <button class="btn" @onclick="() => RemoveCart_Click(item.ProductId)">
-                                   <i class="bi-x-lg text-primary"></i>
-                               </button>
-                           </div>
-                       </div>
-                   </li>
-               }
-
-           </ul>
+                <div class="card shadow-sm mb-3">
+                     <h5 class="card-header py-3">Shipped from Onlineshop</h5>
+                    <div class="card-body">
+                    
+                                            <!-- Cart items will be dynamically added here -->
+                        @foreach (var item in shoppingCartItems)
+                        {
+                            
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                                    <!-- Content for Column 1 -->
+                                    <img src="assets/images/no-image.jpg" height="100" alt="@item.ProductName" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6  d-flex flex-column justify-content-center align-self-center mb-3">
+                                    <!-- Content for Column 2 -->
+                                    <h5>@item.ProductName</h5>
+                                    <p>@item.CategoryName</p>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center align-self-center mb-3">
+                                    <!-- Content for Column 3 -->
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" @onclick="() => RemoveFromCart_Click(item)" class="btn btn-outline-secondary">
+                                            <i class="bi-dash text-primary"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary"><b>@item.Qty</b></button>
+                                        <button type="button" class="btn btn-outline-secondary" @onclick="() => AddToCart_Click(item, 1)">
+                                            <i class="bi-plus text-primary"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center align-self-center mb-3">
+                                    <!-- Content for Column 4 -->
+                                    <h5 class="card-title">@CalculateItemTotal(item).ToString("C")</h5>
+                                    <button type="button" @onclick="() => RemoveCart_Click(item.ProductId)" class="btn">
+                                        <i class="bi-x"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+                        }
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
@@ -74,4 +77,10 @@ else
                 </div>
             </div>
         </div>
+    }
+    else
+    {
+        <EmptyContent Image="assets/images/empty_cart.svg" Message="Your cart is empty" OnClick="ContinueShopping" />
+    }
+    
 }

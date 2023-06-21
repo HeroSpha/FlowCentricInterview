@@ -12,13 +12,19 @@ public partial class Index : WPBaseComponent
     private IProductService ProductService { get; set; }
     [Inject] public IShoppingCartService ShoppingCartService { get; set; }
     private string? inputValue;
+    
+    
+    protected override bool ShouldRender()
+    {
+        return shouldRender;
+    }
+    
     private async void HandleTextChanged(ChangeEventArgs e)
     {
         inputValue = e.Value?.ToString();
         products = products.Where(x => x.ProductName
             .ContainsIgnoreCase(inputValue!) 
                                        || x.CategoryName.ContainsIgnoreCase(inputValue!));
-        //await GetProducts();
     }
     protected override async Task OnInitializedAsync()
     {
@@ -27,8 +33,8 @@ public partial class Index : WPBaseComponent
             await GetProducts();
             var shoppingCartItems = ShoppingCartService.GetItems();
             var totalQty = shoppingCartItems.Sum(i => i.Qty);
-            
             ShoppingCartService.RaiseEventOnShoppingCartChanged(totalQty);
+            shouldRender = true;
         }
         catch (Exception e)
         {

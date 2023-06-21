@@ -1,0 +1,22 @@
+﻿@using OnlineShop.Components.Components.Button.Enums
+@namespace OnlineShop.Components
+<div class="d-flex flex-column">
+    <img src="@Image" class="img-thumbnail rounded mb-3" alt="empty cart rounded"  style="height: 200px"/>
+    <b class="mb-3 text-center">@Message</b>
+       @if (IsVisible)
+       {
+           <WPButton Text="Continue shopping" OnClick="OnClick"  ButtonStyle="ButtonStyle.outlinesuccess" />
+       }
+            
+</div>
+
+@code {
+    [Parameter] public string Message { get; set; }
+
+    [Parameter]
+    public bool IsVisible { get; set; } = true;
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+    [Parameter]
+    public string Image { get; set; }
+}

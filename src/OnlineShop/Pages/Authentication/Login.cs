@@ -23,7 +23,7 @@ public partial class Login : ComponentBase
         if (loggedInUser != null)
         {
             await LocalStorage.SetItemAsync<UserDto>(UserConfig.User, loggedInUser);
-            await LocalStorage.SetItemAsync(UserConfig.UserId, loggedInUser.UserID);
+            await LocalStorage.SetItemAsync(UserConfig.UserId, loggedInUser.UserId);
             await AuthStateProvider.GetAuthenticationStateAsync();
             NavigationManager.NavigateTo("");
         }

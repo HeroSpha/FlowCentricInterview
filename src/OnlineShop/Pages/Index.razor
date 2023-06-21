@@ -2,29 +2,39 @@
 @using OnlineShop.Components.Components.Button.Enums
 @inherits WPBaseComponent
 
-<div class="input-group input-group-lg mb-3">
-    <span class="input-group-text" id="inputGroup-sizing-lg">
-        <i class="bi bi-search"></i>
-    </span>
-  <input type="text" @oninput="HandleTextChanged" class="form-control" placeholder="Search products" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
 
-@if (products.Any())
+
+@if (shouldRender)
 {
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-lg">
+            <i class="bi bi-search"></i>
+        </span>
+        <input type="text" @oninput="HandleTextChanged" class="form-control" placeholder="Search products" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
     
-    var productCount = products.Count();
-    var productRowList = new List<ProductDto>();
-    @if (productCount > 0)
+    @if (products.Any())
     {
-        
-        @foreach (var prodGroup in GetGroupedProductsByCategory())
+    
+        var productCount = products.Count();
+        var productRowList = new List<ProductDto>();
+        @if (productCount > 0)
         {
-            <h6 class="mb-2 mt-2 text-primary text-capitalize">@GetCategoryName(prodGroup) [@prodGroup.Count() products]</h6>
-            <div class="row mt-3">
-              <DisplayProducts Products="@prodGroup" />
-            </div>
+        
+            @foreach (var prodGroup in GetGroupedProductsByCategory())
+            {
+                <h6 class="mb-2 mt-2 text-primary text-capitalize">@GetCategoryName(prodGroup) [@prodGroup.Count() products]</h6>
+                <div class="row mt-3">
+                    <DisplayProducts Products="@prodGroup" />
+                </div>
+            }
         }
     }
+    else
+    {
+        <p>No items available</p>
+    }
+    
 }
 else
 {

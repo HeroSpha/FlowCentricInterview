@@ -1,0 +1,32 @@
+﻿ @inherits OnlineShop.Components.Components.WPComponentBase
+ @namespace OnlineShop.Components
+ <div class="row">
+     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+         <!-- Content for Column 1 -->
+         <img src="assets/images/no-image.jpg" height="100" alt="@Item.ProductName" />
+     </div>
+     <div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center align-self-center mb-3">
+         <!-- Content for Column 2 -->
+         <h5>@Item.ProductName</h5>
+         <p>@Item.CategoryName</p>
+     </div>
+     <div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center align-self-center mb-3">
+         <!-- Content for Column 3 -->
+         <div class="btn-group" role="group" aria-label="Basic example">
+             <button type="button" @onclick="() => OnRemoveFromCartClick()" class="btn btn-outline-secondary">
+                 <i class="bi-dash text-primary"></i>
+             </button>
+             <button type="button" class="btn btn-outline-secondary"><b>@Item.Qty</b></button>
+             <button type="button" class="btn btn-outline-secondary" @onclick="() => OnAddToCartClick(1)">
+                 <i class="bi-plus text-primary"></i>
+             </button>
+         </div>
+     </div>
+     <div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center align-self-center mb-3">
+         <!-- Content for Column 4 -->
+         <h5 class="card-title">@TotalItemCost</h5>
+         <button type="button" @onclick="OnRemoveCartClick" class="btn">
+             <i class="bi-x"></i>
+         </button>
+     </div>
+ </div>

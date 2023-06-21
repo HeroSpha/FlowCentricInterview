@@ -14,12 +14,18 @@ public partial class ShoppingCartDisplay : CartCalculator
     [Inject] public IShoppingCartService ShoppingCartService { get; set; }
     private IEnumerable<CartItemDto> shoppingCartItems;
 
+    protected override bool ShouldRender()
+    {
+        return shouldRender;
+    }
+
     protected async override Task OnInitializedAsync()
     {
         try
         {
             shoppingCartItems = ShoppingCartService.GetItems();
             CartChanged();
+            shouldRender = true;
         }
         catch (Exception e)
         {
@@ -61,6 +67,11 @@ public partial class ShoppingCartDisplay : CartCalculator
     private void Checkout()
     {
         NavigationManager?.NavigateTo("/Checkout");
+    }
+
+    private void ContinueShopping()
+    {
+        NavigationManager?.NavigateTo("");
     }
     
 }

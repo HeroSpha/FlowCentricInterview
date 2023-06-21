@@ -30,6 +30,9 @@
     <Compile Update="Components\Payments\PaymentOption.cs">
       <DependentUpon>PaymentOption.razor</DependentUpon>
     </Compile>
+    <Compile Update="Components\Templates\CartItem.cs">
+      <DependentUpon>CartItem.razor</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

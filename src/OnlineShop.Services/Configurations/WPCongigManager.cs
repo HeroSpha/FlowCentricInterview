@@ -12,4 +12,6 @@ public class WPCongigManager : IWPCongigManager
     }
 
     public string? BaseAddress => _configuration["AppConfig:BaseAddress"];
+    public string? ApiKeyName => _configuration["AppConfig:ApiKeyName"];
+    public string? ApiKeyValue => _configuration["AppConfig:ApiKeyValue"];
 }

@@ -1,7 +1,10 @@
 ﻿using Blazored.LocalStorage;
+using Blazored.Toast.Services;
+using Flurl.Http;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
+using OnlineShop.Components;
 using OnlineShop.Configurations;
 using OnlineShop.Services;
 using OnlineShop.Services.Models;
@@ -25,11 +28,16 @@ public partial class CheckoutDisplay : CartCalculator
         shoppingCartItems = ShoppingCartService.GetItems();
         CheckoutSummary();
         IsEftSelected = true;
+        if (!shoppingCartItems.Any())
+        {
+            NavigationManager.NavigateTo("/");
+        }
     }
 
     private void CheckoutSummary()
     {
         TotalQty =  shoppingCartItems.Sum(cartItem => cartItem.Qty);
+        TotalCostDiscounted = TotalDiscountedCartCost(shoppingCartItems);
         TotalCost = TotalCartCost(shoppingCartItems);
         CanCheckout = shoppingCartItems.Any();
         ShoppingCartService.RaiseEventOnShoppingCartChanged(TotalQty);
@@ -52,13 +60,21 @@ public partial class CheckoutDisplay : CartCalculator
 
     private async void Checkout()
     {
-        var user = await LocalStorage.GetItemAsync<UserDto>(UserConfig.User);
-        if (user == null || !shoppingCartItems.Any()) return;
-        var order = OrderService.Prepare(shoppingCartItems, user, SalesValueExcl, DiscountAmount, SalesValueIncl);
-        await OrderService.Create(order);
-        ShoppingCartService.Clear();
-        CheckoutSummary();
-        NavigationManager.NavigateTo("/");
+        try
+        {
+            var user = await LocalStorage.GetItemAsync<UserDto>(UserConfig.User);
+            if (user == null || !shoppingCartItems.Any()) return;
+            var order = OrderService.Prepare(shoppingCartItems, user, SalesValueExcl, DiscountAmount, SalesValueIncl);
+            await OrderService.Create(order);
+            ShoppingCartService.Clear();
+            CheckoutSummary();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            ErrorMessage = "An error occured, try again later.";
+            StateHasChanged();
+        }
     }
 
 }

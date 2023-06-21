@@ -19,10 +19,10 @@ public class CustomAuthenticationProvider : AuthenticationStateProvider
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
         var state = new AuthenticationState(new ClaimsPrincipal());
-        var userId = await _localStorageService.GetItemAsStringAsync(UserConfig.UserId);
-        if (!string.IsNullOrEmpty(userId))
+        var userId = await _localStorageService.GetItemAsync<int>(UserConfig.UserId);
+        if (userId > 0)
         {
-            var user = await _userService.GetUserByIdAsync(long.Parse(userId));
+            var user = await _userService.GetUserByIdAsync(userId);
             if(user != null)
             {
                 var identity = new ClaimsIdentity(new[]

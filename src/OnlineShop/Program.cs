@@ -1,4 +1,5 @@
 using Blazored.LocalStorage;
+using Blazored.Toast;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -19,6 +20,7 @@ builder.Services.Configure<DiscountSettings>(options => builder.Configuration.Ge
 //builder.Services.AddSingleton(new DiscountSettings());
 
 builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddBlazoredToast();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddSingleton<IDiscountCalculator, DiscountCalculator>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationProvider>();

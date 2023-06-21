@@ -874,3 +874,13 @@ D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\OnlineShop.dll
 D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\refint\OnlineShop.dll
 D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\OnlineShop.pdb
 D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\ref\OnlineShop.dll
+D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\scopedcss\Pages\ProductDetails\DisplayProductDetails.razor.rz.scp.css
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Options.ConfigurationExtensions.dll.gz
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\build-gz\dSuJhA6q.gz
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\wwwroot\_framework\Blazored.Toast.dll
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\wwwroot\_framework\Blazored.Toast.dll.gz
+D:\Webparam\OnlineShop\src\OnlineShop\bin\Debug\net7.0\Blazored.Toast.dll
+D:\Webparam\OnlineShop\src\OnlineShop\obj\Debug\net7.0\build-gz\C9TRe5DL.gz

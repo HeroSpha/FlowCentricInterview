@@ -5,8 +5,9 @@ namespace OnlineShop.Services;
 
 public interface IOrderService
 {
-    OrderDto Prepare(IEnumerable<CartItemDto> cartItems, UserDto user, decimal salesValueExcl,  decimal appliedDiscount, decimal salesValueInc);
-    Task Create(OrderDto order);
+    OrderInput Prepare(IEnumerable<CartItemDto> cartItems, UserDto user, decimal salesValueExcl,  decimal appliedDiscount, decimal salesValueInc);
+    Task Create(OrderInput order);
     Task<IEnumerable<OrderDto>> GetOrders();
+    Task<IEnumerable<OrderDto>> GetUserOrders(long userId);
     Task<OrderDto> GetOrderByIdAsync(long id);
 }

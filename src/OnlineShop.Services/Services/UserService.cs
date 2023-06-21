@@ -8,15 +8,21 @@ namespace OnlineShop.Services.Services;
 
 public class UserService : IUserService
 {
+    private readonly IWPCongigManager _configManager;
+
+    public UserService(IWPCongigManager configManager)
+    {
+        _configManager = configManager;
+    }
     public async Task<IEnumerable<UserDto>> GetUsersAsync()
     {
         return await GetUsers();
     }
 
-    private static async Task<IEnumerable<UserDto>> GetUsers()
+    private  async Task<IEnumerable<UserDto>> GetUsers()
     {
-        var users = await AppConfig.BaseAddress
-            .WithHeader(AppConfig.ApiKeyName, AppConfig.ApiKeyValue)
+        var users = await  _configManager.BaseAddress
+            .WithHeader(_configManager.ApiKeyName, _configManager.ApiKeyValue)
             .AppendPathSegment("Users")
             .GetJsonAsync<IEnumerable<UserDto>>();
         return users;
@@ -24,8 +30,8 @@ public class UserService : IUserService
 
     public async Task<UserDto> GetUserByIdAsync(long id)
     {
-        var user = await AppConfig.BaseAddress
-            .WithHeader(AppConfig.ApiKeyName,AppConfig.ApiKeyValue)
+        var user = await _configManager.BaseAddress
+            .WithHeader(_configManager.ApiKeyName, _configManager.ApiKeyValue)
             .AppendPathSegment($"Users/{id}")
             .GetJsonAsync<UserDto>();
         return user;
@@ -33,8 +39,8 @@ public class UserService : IUserService
 
     public async Task Create(UserDto userInput)
     {
-        var user = await AppConfig.BaseAddress
-            .WithHeader(AppConfig.ApiKeyName,AppConfig.ApiKeyValue)
+        var user = await _configManager.BaseAddress
+            .WithHeader(_configManager.ApiKeyName, _configManager.ApiKeyValue)
             .AppendPathSegment("Users")
             .PostJsonAsync(userInput);
     }

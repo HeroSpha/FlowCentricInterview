@@ -1,3 +1,3 @@
 ﻿namespace OnlineShop.Services.Models;
 
-public record ProductDetailDto(long OrderDetailsID, long OrderID, long ProductID, int Quantity);
+public record ProductDetailDto(long OrderDetailsId, long OrderId, long ProductId, int Quantity);

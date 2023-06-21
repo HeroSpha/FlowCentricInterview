@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nzZd/KNadEcj4QMIbFbF2RHcmsAuKGMpT+GmSx6CGQc=",
+  "Hash": "7jqLxGzu7fgjBhycTy+4gActQqenYiHWEbqMnmahgEI=",
   "Source": "OnlineShop",
   "BasePath": "/",
   "Mode": "Root",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "OnlineShop.Components",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
@@ -35,6 +35,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\appsu\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\appsu\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\appsu\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\Blazored.Toast.bundle.scp.css"
+    },
     {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OnlineShop.Components.bundle.scp.css",
       "SourceId": "OnlineShop.Components",
@@ -119,6 +136,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\appsu\\.nuget\\packages\\blazored.localstorage\\4.3.0\\lib\\net7.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "SourceId": "OnlineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\appsu\\.nuget\\packages\\blazored.toast\\4.1.0\\lib\\net7.0\\Blazored.Toast.dll"
     },
     {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.7.0.7.bk6n739krt.js",
@@ -612,6 +646,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\appsu\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Logging.dll"
+    },
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+      "SourceId": "OnlineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\appsu\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Options.ConfigurationExtensions.dll"
     },
     {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
@@ -4609,6 +4660,23 @@
       "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\netstandard.dll"
     },
     {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\obj\\Debug\\net7.0\\build-gz\\C9TRe5DL.gz",
+      "SourceId": "OnlineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Toast.dll"
+    },
+    {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\obj\\Debug\\net7.0\\build-gz\\Ca8LVV3K.gz",
       "SourceId": "OnlineShop",
       "SourceType": "Computed",
@@ -4726,6 +4794,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Data.dll"
+    },
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\obj\\Debug\\net7.0\\build-gz\\dSuJhA6q.gz",
+      "SourceId": "OnlineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Options.ConfigurationExtensions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.ConfigurationExtensions.dll"
     },
     {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\obj\\Debug\\net7.0\\build-gz\\DwJ7l3X+.gz",
@@ -7397,6 +7482,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Discovery_Limited_logo.svg.png"
     },
     {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\assets\\images\\empty_cart.svg",
+      "SourceId": "OnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/images/empty_cart.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\empty_cart.svg"
+    },
+    {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\assets\\images\\First_National_Bank_Logo.svg.png",
       "SourceId": "OnlineShop",
       "SourceType": "Discovered",
@@ -7446,6 +7548,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\no-image.jpg"
+    },
+    {
+      "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\assets\\images\\online.png",
+      "SourceId": "OnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/images/online.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\online.png"
     },
     {
       "Identity": "D:\\Webparam\\OnlineShop\\src\\OnlineShop\\wwwroot\\css\\app.css",

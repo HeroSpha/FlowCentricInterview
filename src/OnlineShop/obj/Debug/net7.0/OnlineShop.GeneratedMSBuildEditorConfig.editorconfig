@@ -44,16 +44,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXE9yZGVycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Webparam/OnlineShop/src/OnlineShop/Pages/ProductDetails/DisplayProductDetails.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbHNcRGlzcGxheVByb2R1Y3REZXRhaWxzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Webparam/OnlineShop/src/OnlineShop/Shared/CartMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcnRNZW51LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Webparam/OnlineShop/src/OnlineShop/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Webparam/OnlineShop/src/OnlineShop/Shared/User.razor]
@@ -64,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Webparam/OnlineShop/src/OnlineShop/Pages/ProductDetails/DisplayProductDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbHNcRGlzcGxheVByb2R1Y3REZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-34wbu1prze
+
 [D:/Webparam/OnlineShop/src/OnlineShop/Pages/ShopppingCart/ShoppingCartDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBwaW5nQ2FydFxTaG9wcGluZ0NhcnREaXNwbGF5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ig3zsdrhws
+
+[D:/Webparam/OnlineShop/src/OnlineShop/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y68exbjm2o

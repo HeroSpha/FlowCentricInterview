@@ -22,7 +22,7 @@ public class MockUserService : IUserService
 
     public async Task<UserDto> GetUserByIdAsync(long id)
     {
-        var user = _users.FirstOrDefault(x => x.UserID == id);
+        var user = _users.FirstOrDefault(x => x.UserId == id);
         return await Task.FromResult(user);
     }
 

@@ -1,7 +1,7 @@
 ﻿namespace OnlineShop.Services.Models;
 
 public record OrderDto(
-    long UserID,
+    long UserId,
     DateTime OrderDate,
     string CustomerName,
     decimal SalesValueExcl,
@@ -10,6 +10,6 @@ public record OrderDto(
     
     IEnumerable<OrderDetailDto> OrderDetails)
 {
-    public long OrderID { get; init; }
-    public UserDto User { get; set; }
+    public long OrderId { get; set; }
+    public UserDto? User { get; set; }
 }

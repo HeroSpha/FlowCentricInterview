@@ -1,16 +1,26 @@
 ﻿using Flurl;
 using Flurl.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using OnlineShop.Services.Configurations;
 using OnlineShop.Services.Models;
 
 namespace OnlineShop.Services.Services;
 
-public class ProductService :IProductService
+public class ProductService : IProductService
 {
+    private readonly IWPCongigManager _configManager;
+
+    public ProductService(IWPCongigManager configManager)
+    {
+        _configManager = configManager;
+    }
+
     public async Task<IEnumerable<ProductDto>> GetProductsAsync()
     {
-        var products = await AppConfig.BaseAddress
-            .WithHeader(AppConfig.ApiKeyName,AppConfig.ApiKeyValue)
+        var products = await 
+            _configManager.BaseAddress
+                .WithHeader(_configManager.ApiKeyName, _configManager.ApiKeyValue)
             .AppendPathSegment("Products")
             .GetJsonAsync<IEnumerable<ProductDto>>();
         return products;
@@ -20,8 +30,8 @@ public class ProductService :IProductService
     {
         try
         {
-            var product = await AppConfig.BaseAddress
-                .WithHeader(AppConfig.ApiKeyName,AppConfig.ApiKeyValue)
+            var product = await _configManager.BaseAddress
+                .WithHeader(_configManager.ApiKeyName, _configManager.ApiKeyValue)
                 .AppendPathSegment($"Products/{productId}")
                 .GetJsonAsync<ProductDto>();
             return product;
@@ -32,4 +42,7 @@ public class ProductService :IProductService
             throw;
         }
     }
+
+
+   
 }

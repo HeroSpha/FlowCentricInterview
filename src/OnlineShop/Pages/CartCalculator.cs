@@ -10,6 +10,7 @@ namespace OnlineShop.Pages;
 public class CartCalculator : WPBaseComponent
 {
     protected int TotalQty = 0;
+    protected decimal TotalCostDiscounted = 0m;
     protected decimal TotalCost = 0m;
     protected bool CanCheckout = false;
     protected decimal SalesValueExcl = 0;
@@ -22,7 +23,7 @@ public class CartCalculator : WPBaseComponent
     {
         return cartItem.UnitPrice * cartItem.Qty;
     }
-    protected decimal TotalCartCost(IEnumerable<CartItemDto> shoppingCartItems)
+    protected decimal TotalDiscountedCartCost(IEnumerable<CartItemDto> shoppingCartItems)
     {
         var discountSetting = new DiscountSettings();
         Configuration.Bind(DiscountSettings.SectionName, discountSetting);
@@ -35,12 +36,12 @@ public class CartCalculator : WPBaseComponent
         AppliedDiscount = discountedCost.appliedDiscount;
         return discountedCost.discountedCost;
     }
-
-    private void CalculateDiscountAmount(Discount? discount, decimal totalCost, decimal discountAmount)
+    protected decimal TotalCartCost(IEnumerable<CartItemDto> shoppingCartItems)
     {
-        if (discount != null)
-        {
-            
-        }
+        
+        return shoppingCartItems.Sum(cartItem => cartItem.Qty * cartItem.UnitPrice);
+        
     }
+
+    
 }

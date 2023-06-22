@@ -1,10 +1,11 @@
 ﻿namespace OnlineShop.Services.Models;
 
 public record OrderInput(
-    long UserId, 
-    string CustomerName, 
-    DateTime OrderDate, 
-    decimal SalesValueExcl, 
-    decimal AppliedDiscount, 
-    decimal SalesValueIncl,
-    IEnumerable<OrderDetailInput> OrderDetails);
+    long orderId,
+    long userId, 
+    string customerName, 
+    DateTime orderDate, 
+    decimal salesValueExcl, 
+    decimal appliedDiscount, 
+    decimal salesValueIncl,
+    IEnumerable<OrderDetailInput> orderDetails);

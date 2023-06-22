@@ -65,6 +65,7 @@ public partial class CheckoutDisplay : CartCalculator
             var user = await LocalStorage.GetItemAsync<UserDto>(UserConfig.User);
             if (user == null || !shoppingCartItems.Any()) return;
             var order = OrderService.Prepare(shoppingCartItems, user, SalesValueExcl, DiscountAmount, SalesValueIncl);
+            Console.WriteLine(JsonConvert.SerializeObject(order));
             await OrderService.Create(order);
             ShoppingCartService.Clear();
             CheckoutSummary();

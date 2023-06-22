@@ -21,8 +21,8 @@ public class OrderService : IOrderService
     public OrderInput Prepare(IEnumerable<CartItemDto> cartItems, UserDto user, decimal salesValueExcl,  decimal appliedDiscount, decimal salesValueInc)
     {
         var add = _configManager.BaseAddress;
-        var orderDetails = cartItems.Select(item => new OrderDetailInput(0,0,item.ProductId, item.Qty, string.Empty));
-        return new OrderInput(user.UserId,  user.Username, DateTimeProvider.UtcNow, salesValueExcl, appliedDiscount, salesValueInc, orderDetails);
+        var orderDetails = cartItems.Select(item => new OrderDetailInput(0,0,item.ProductId, item.Qty));
+        return new OrderInput(0,user.UserId,  user.Username, DateTimeProvider.UtcNow, salesValueExcl, appliedDiscount, salesValueInc, orderDetails);
     }
 
     public async Task Create(OrderInput order)
